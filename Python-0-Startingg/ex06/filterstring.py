@@ -7,6 +7,10 @@ def check_len(word_len):
 
 
 def main():
+    '''
+    Return an iterator yielding those items of iterable for which function(item)
+	is true. If function is None, return the items that are true.
+    '''
     try:
         assert len(sys.argv) == 3, "arguments are bad"
     except AssertionError as msg:
