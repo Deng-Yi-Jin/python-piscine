@@ -2,6 +2,10 @@ import sys
 
 
 def building(str):
+    '''
+    By Odin, by Thor ! Use your brain !!! Don’t reinvent the wheel, use
+    the language features.
+    '''
     upper, lower, punct, spaces, digits = 0, 0, 0, 0, 0
     for i in str:
         if i.isupper():
@@ -33,7 +37,7 @@ def main():
             str = sys.argv[1]
         elif (len(sys.argv) == 1):
             print("What is the text to count?")
-        str = sys.stdin.readline()
+            str = sys.stdin.readline()
         building(str)
 
 
