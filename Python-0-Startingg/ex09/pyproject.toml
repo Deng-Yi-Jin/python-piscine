@@ -18,4 +18,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = ""
+"Homepage" = "https://github.com/Deng-Yi-Jin/python-piscine/tree/main/Python-0-Startingg/ex09"
+"Bug Tracker" = "https://github.com/Deng-Yi-Jin/python-piscine/issues"
