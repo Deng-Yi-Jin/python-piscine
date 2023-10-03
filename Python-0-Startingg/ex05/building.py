@@ -3,8 +3,9 @@ import sys
 
 def building(str):
     '''
-    By Odin, by Thor ! Use your brain !!! Don’t reinvent the wheel, use
-    the language features.
+    Takes in an argument and display it outputs the number
+    of characters, upper and lower letters, number of
+    punctuation, spaces and digits.
     '''
     upper, lower, punct, spaces, digits = 0, 0, 0, 0, 0
     for i in str:

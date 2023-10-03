@@ -4,9 +4,11 @@ def ft_filter(func, iterable):
     for which function(item)
     is true. If function is None, return the items that are true.
     '''
-    for x in iterable:
-        if func(x):
-            yield x
+    # for x in iterable:
+    #     if func(x):
+    #         yield x
+    new_list = [x for x in iterable if func(x)]
+    return new_list
 
 
 # def ft_is_even(x) :
@@ -17,8 +19,7 @@ def ft_filter(func, iterable):
 
 #   iterable = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 #   result = ft_filter(ft_is_even, iterable)
-#   for x in result:
-# 	  print(x)
+#   print(list(result))
 
 
 # if __name__ == "__main__":

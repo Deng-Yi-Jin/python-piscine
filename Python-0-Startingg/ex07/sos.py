@@ -37,9 +37,11 @@ def main():
         exit(0)
     try:
         assert check_argv(sys.argv[1]), "Not digits or string"
-        sos(sys.argv[1])
+        exit(0)
     except AssertionError as msg:
         print("AssertionError:", msg)
+    else:
+        sos(sys.argv[1])
 
 
 if __name__ == '__main__':
