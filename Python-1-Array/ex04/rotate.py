@@ -3,9 +3,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 
-def zoom(path: str, factor: int | float):
+
+def rotate(path: str, factor: int | float):
     '''
-    Load image, apply zoom factor, and return list of pixels.
+    Load image, apply zoom factor,\
+    then apply rotate, and return list of pixels.
     '''
     try:
         assert isinstance(path, str), "Path is not a str"
@@ -22,7 +24,7 @@ def zoom(path: str, factor: int | float):
     x2 = int(image_arr.shape[0] - x1)
     y2 = int(image_arr.shape[1] - y1)
     image_slicing = image_arr[x1:x2, y1:y2]
-    
+
     gray_image = np.dot(image_slicing[..., :3], [0.2989, 0.5870, 0.1140])
     gray_image_axis = gray_image[:, :, np.newaxis]
     x_axis_len = len(gray_image_axis[0])
@@ -37,14 +39,16 @@ def zoom(path: str, factor: int | float):
     print("New shape after Transpose:", gray_image.shape)
 
     print(np.round(gray_image_axis).astype(int))
-    
-    plt.imshow((outer_list), cmap= "gray")
+
+    plt.imshow((outer_list), cmap="gray")
     plt.show()
+
 
 def main():
     print(ft_load("animal.jpeg"))
-    zoom("animal.jpeg", 0.2)
+    rotate("animal.jpeg", 0.2)
     # print()
+
 
 if __name__ == "__main__":
     main()

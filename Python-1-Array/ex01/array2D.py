@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def slice_me(family: list, start: int, end: int) -> list:
     '''
     Slice the 2D array and return a new 2D array
@@ -19,4 +20,3 @@ def slice_me(family: list, start: int, end: int) -> list:
         new_shape = family_array[start:end]
         print("My new shape is {}".format(new_shape))
         return [list(i) for i in new_shape]
-        

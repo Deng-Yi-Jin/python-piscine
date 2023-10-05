@@ -1,6 +1,7 @@
 from PIL import Image
 import numpy as np
 
+
 def ft_load(path: str) -> list:
     '''
     Load image from path
@@ -14,4 +15,3 @@ def ft_load(path: str) -> list:
         img = Image.open(path)
         img_array = np.array(img)
         return img_array
-        
