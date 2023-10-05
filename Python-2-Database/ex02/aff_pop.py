@@ -23,9 +23,9 @@ def main():
     try:
         dataframe = load('population_total.csv')
         data_life_year = dataframe.columns[1:252]
-        data_life_country1 = dataframe.loc
+        data_life_country1 = dataframe.loc\
         [dataframe["country"] == "Malaysia"].iloc[0][1:252]
-        data_life_country2 = dataframe.loc
+        data_life_country2 = dataframe.loc\
         [dataframe["country"] == "France"].iloc[0][1:252]
         data_life_country1 = integer_converter(data_life_country1)
         data_life_country2 = integer_converter(data_life_country2)

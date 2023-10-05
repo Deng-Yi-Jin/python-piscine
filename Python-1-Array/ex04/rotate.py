@@ -27,12 +27,12 @@ def rotate(path: str, factor: int | float):
 
     gray_image = np.dot(image_slicing[..., :3], [0.2989, 0.5870, 0.1140])
     gray_image_axis = gray_image[:, :, np.newaxis]
-    x_axis_len = len(gray_image_axis[0])
-    y_axis_len = len(gray_image_axis)
+    column_len = len(gray_image_axis[0])
+    row_len = len(gray_image_axis)
     outer_list = []
-    for row in range(x_axis_len):
+    for row in range(row_len):
         innner_list = []
-        for column in range(y_axis_len):
+        for column in range(column_len):
             innner_list.append(gray_image_axis[column][row])
         outer_list.append(innner_list)
 
@@ -45,7 +45,7 @@ def rotate(path: str, factor: int | float):
 
 
 def main():
-    print(ft_load("animal.jpeg"))
+    # print(ft_load("animal.jpeg"))
     rotate("animal.jpeg", 0.2)
     # print()
 
